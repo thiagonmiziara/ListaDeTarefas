@@ -1,0 +1,88 @@
+html {
+    font-family: 'Dancing Script', cursive;
+    width: 100%;
+}
+
+body {
+    background-color: rgba(90, 90, 223, 0.938);
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+}
+
+li {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    font-weight: bold;
+}
+
+p.pRodape {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+
+input {
+    width: 500px;
+    height: 2rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+    background-color: white;
+    color: #222;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    font-family: 'Dancing Script', cursive;
+}
+
+.ulLista {
+    display: flex;
+    align-items: center;
+}
+
+.adicionaLista {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    background: white;
+    color: #222;
+}
+
+.btnFeito {
+    background: rgb(133, 170, 78);
+}
+
+.feito {
+    color: rfsdfed;
+    text-decoration: line-through;
+}
+
+.btnDeletar {
+    background: rgb(170, 55, 55);
+}
+
+.removeBtn {
+    opacity: 0;
+}
+
+.deletar {
+    transition: 5s;
+    opacity: 0;
+}
+
+button {
+    color: white;
+    font-size: 1.5rem;
+    background: green;
+    margin-right: 5px;
+}
