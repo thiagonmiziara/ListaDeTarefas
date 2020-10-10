@@ -1,36 +1,52 @@
-const $ = document.querySelector.bind(document);
-const texto = $('.txtLista');
-const btnAdicionar = $('.adicionaLista');
-const ulLista = $('.ulLista');
+var lista = document.querySelectorAll("li");
+var i;
+for (i = 0; i < lista.length; i++) {
+    var span = document.createElement("span");
+    var txt = document.createTextNode("🗑");
+    span.className = "excluir";
+    span.appendChild(txt);
+    lista[i].appendChild(span);
+}
 
 
-btnAdicionar.addEventListener('click', adiciona);
-
-function adiciona() {
-    const lista = document.createElement('li');
-    const btnFeito = document.createElement('button');
-    const btnDeletar = document.createElement('button');
-
-    lista.innerHTML = `${texto.value}`;
-    ulLista.appendChild(lista);
-    ulLista.appendChild(btnFeito);
-    ulLista.appendChild(btnDeletar);
-
-    btnFeito.innerText = 'Feito';
-    btnFeito.classList.add('btnFeito');
-    btnFeito.addEventListener('click', addClass);
-
-    function addClass() {
-
-        lista.classList.toggle('feito')
+var excluir = document.getElementsByClassName("excluir");
+var i;
+for (i = 0; i < excluir.length; i++) {
+    excluir[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
     }
+}
 
-    btnDeletar.addEventListener('click', addClassDeletar)
-    btnDeletar.innerText = 'Deletar';
-    btnDeletar.classList.add('btnDeletar');
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('feito');
+    }
+}, false);
 
-    function addClassDeletar() {
+function novoItem() {
+    var li = document.createElement("li");
+    var inputValue = document.querySelector("#tarefa").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+        alert("Digite uma tarefa!");
+    } else {
+        document.querySelector(".ulLista").appendChild(li);
+    }
+    document.querySelector("#tarefa").value = "";
 
-        lista.remove(ulLista)
+    var span = document.createElement("span");
+    var txt = document.createTextNode("🗑");
+    span.className = "excluir";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < excluir.length; i++) {
+        excluir[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
     }
 }

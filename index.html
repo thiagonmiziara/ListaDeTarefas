@@ -4,27 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de compras</title>
+    <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <h1>Lista de Tarefas</h1>
-    </header>
-    <section class="container">
-        <input type="text" name="tarefa" class="txtLista">
-        <button class="adicionaLista">Adicionar</button>
-    </section>
-    <ul class="ulLista">
-    </ul>
+<div id="myDiv" class="cabecalho">
+    <h1>Lista de Tarefas Miziara</h1>
+    <input type="text" id="tarefa" placeholder="Digite aqui sua tarefa!">
+    <span onclick="novoItem()" class="addBtn">Adicionar Tarefa</span>
+</div>
+
+<ul class="ulLista">
+
+    <li class="feito">Fazer Café</li>
+
+</ul>
 
 
-    <p class="pRodape">&copyThiago Miziara</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
